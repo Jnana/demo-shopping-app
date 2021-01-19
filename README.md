@@ -1,1 +1,1 @@
-# demo-shopping-app
+A sample shopping application for practice purpose.
