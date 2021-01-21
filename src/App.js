@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'h8k-components';
-import ProductList from "./components/product-list";
+import { ProductList } from "./components/product-list";
 import Cart from "./components/cart";
 
 const title = "HackerShop";
