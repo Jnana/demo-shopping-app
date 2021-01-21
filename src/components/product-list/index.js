@@ -11,6 +11,10 @@ export default class ProductList extends Component {
         console.log(product);
     }
 
+    addQuantity(product) {
+        console.log(product);
+    }
+
     render() {
         return (
             <div className="layout-row wrap justify-content-center flex-70 app-product-list">
@@ -44,8 +48,10 @@ export default class ProductList extends Component {
                                             disabled
                                             className="cart-quantity" data-testid="cart-quantity" />
 
-                                        <button className="x-small icon-only outlined"
-                                            data-testid="btn-quantity-add">
+                                        <button className="x-small icon-only outlined" data-testid="btn-quantity-add"
+                                            onClick={() => {
+                                                this.addQuantity(product);
+                                            }} >
                                             <i className="material-icons">add</i>
                                         </button>
                                     </div>
@@ -54,9 +60,7 @@ export default class ProductList extends Component {
                         </section>
                     )
                 })}
-
             </div>
-
         );
     }
 }
