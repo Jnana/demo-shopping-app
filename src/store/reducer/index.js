@@ -1,16 +1,9 @@
-import { UpdateMode } from "../action/constants";
+import { combineReducers } from 'redux';
+import CartReducer from '../../components/cart/reducer'
+import { ProductListReducer } from '../../components/product-list/reducer'
 
-const initialState = {
-    items: []
-}
-
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case UpdateMode.ADD:
-            return state.items.push(action.payload)
-        case UpdateMode.REMOVE:
-            return state.items.shift(action.payload)
-        default: return state
-    }
-}
-export default reducer;
+export default combineReducers(
+    {
+        CartReducer,
+        ProductListReducer
+    });
